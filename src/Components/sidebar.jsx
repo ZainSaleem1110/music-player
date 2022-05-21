@@ -21,62 +21,62 @@ function Sidebar() {
                     <BsMusicNoteBeamed className="text-[20px]"/>
                     <span className="ml-7">Discover</span>
                 </Link>
-                <Link to="/" className="h-[40px] flex items-center text-[15px] pl-6 ">
+                <Link to="/newMusic" className="h-[40px] flex items-center text-[15px] pl-6 ">
                     <BsMusicNote className="text-[20px]"/>
                     <span className="ml-7">New Music</span>
                 </Link>
-                <Link to="/" className="h-[40px] flex items-center text-[15px] pl-6 ">
+                <Link to="/topMusic" className="h-[40px] flex items-center text-[15px] pl-6 ">
                     <BsGraphUp className="text-[20px]"/>
                     <span className="ml-7">Top Music</span>
                 </Link>
-                <Link to="/" className="h-[40px] flex items-center text-[15px] pl-6 ">
+                <Link to="/albums" className="h-[40px] flex items-center text-[15px] pl-6 ">
                     <MdLibraryMusic className="text-[20px]"/>
                     <span className="ml-7">Albums</span>
                 </Link>
-                <Link to="/" className="h-[40px] flex items-center text-[15px] pl-6 ">
+                <Link to="/sportLight" className="h-[40px] flex items-center text-[15px] pl-6 ">
                     <RiDropFill className="text-[20px]"/>
                     <span className="ml-7">Sportlight</span>
                 </Link>
-                <Link to="/" className="h-[40px] flex items-center text-[15px] pl-6 ">
+                <Link to="/genres" className="h-[40px] flex items-center text-[15px] pl-6 ">
                     <RiDropFill className="text-[20px]"/>
                     <span className="ml-7">Genres</span>
                 </Link>
-                <Link to="/" className="h-[40px] flex items-center text-[15px] pl-6 ">
+                <Link to="/playlists" className="h-[40px] flex items-center text-[15px] pl-6 ">
                     <MdPlaylistPlay className="text-[28px]"/>
                     <span className="ml-5">Playlists</span>
                 </Link>
-                <Link to="/" className="h-[40px] flex items-center text-[15px] pl-6 ">
+                <Link to="/fame" className="h-[40px] flex items-center text-[15px] pl-6 ">
                     <FiBarChart className="text-[20px]"/>
                     <span className="ml-7">Hall of fame</span>
                 </Link>
-                <Link to="/" className="h-[40px] flex items-center text-[15px] pl-6 ">
+                <Link to="/points" className="h-[40px] flex items-center text-[15px] pl-6 ">
                     <RiExchangeDollarLine className="text-[20px]"/>
                     <span className="ml-7">Earn Points</span>
                 </Link>
                 <h1 className="text-[12px] pl-6  mt-7 text-[lightgray]">STORE</h1>
-                <Link to="/" className="h-[40px] flex items-center text-[15px] pl-6  mt-3">
+                <Link to="/browse" className="h-[40px] flex items-center text-[15px] pl-6  mt-3">
                     <FaStoreAlt className="text-[20px]"/>
                     <span className="ml-7">Browse</span>
                 </Link>
-                <Link to="/" className="h-[40px] flex items-center text-[15px] pl-6 ">
+                <Link to="/purchase" className="h-[40px] flex items-center text-[15px] pl-6 ">
                     <IoMdAppstore className="text-[20px]"/>
                     <span className="ml-7">Purchased</span>
                 </Link>
                 <h1 className="text-[12px] pl-6  mt-7 text-[lightgray]">YOUR MUSIC</h1>
-                <Link to="/" className="h-[40px] flex items-center text-[15px] pl-6  mt-3">
+                <Link to="/recentPlayed" className="h-[40px] flex items-center text-[15px] pl-6  mt-3">
                     <MdReplay10 className="text-[28px]"/>
                     <span className="ml-5">Recently Played</span>
                 </Link>
-                <Link to="/" className="h-[40px] flex items-center text-[15px] pl-6 ">
+                <Link to="/myPlaylist" className="h-[40px] flex items-center text-[15px] pl-6 ">
                     <RiPlayListFill className="text-[20px]"/>
                     <span className="ml-7">My Playlists</span>
                 </Link>
-                <Link to="/" className="h-[40px] flex items-center text-[15px] pl-6 ">
+                <Link to="/favourite" className="h-[40px] flex items-center text-[15px] pl-6 ">
                     <AiOutlineStar className="text-[20px]"/>
                     <span className="ml-7">Favourite</span>
                 </Link>
                 <h1 className="text-[12px] pl-6  mt-7 text-[lightgray]">EVENTS</h1>
-                <Link to="/" className="h-[40px] flex items-center text-[15px] pl-6  mt-3">
+                <Link to="/event" className="h-[40px] flex items-center text-[15px] pl-6  mt-3">
                     <BsFillCalendarEventFill className="text-[20px]"/>
                     <span className="ml-7">Events</span>
                 </Link>
