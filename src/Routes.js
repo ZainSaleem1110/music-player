@@ -19,11 +19,11 @@ import Event from './Pages/Events'
 
 function Routeing() {
     return (
-        <div className="overflow-y-auto">
+        <div className="overflow-y-auto h-[100vh]">
             <Navbar />
-            <div className="">
+            <div className="px-4 py-10">
                 <Routes>
-                    <Route path="/" element={<Discover />} />
+                    <Route path="/discover" element={<Discover />} />
                     <Route path="/newMusic" element={<NewMusic />} />
                     <Route path="/topMusic" element={<TopMusic />} />
                     <Route path="/albums" element={<Album />} />

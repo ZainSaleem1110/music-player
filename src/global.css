@@ -29,3 +29,24 @@ body{
     height: 100vh;
     overflow: hidden;
 }
+
+.btn{
+  background: transparent;
+  color: white;
+}
+
+.btn:hover{
+  background: rgba(0, 0, 0, .2);
+}
+
+.active {
+  background: #f98f1d;
+}
+
+.play{
+  visibility: hidden;
+}
+
+.songsCard:hover .play{
+  visibility: visible;
+}
