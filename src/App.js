@@ -1,9 +1,14 @@
 import React from 'react'
+import Sidebar from './Components/sidebar'
+import Route from './Routes'
 
 function App() {
     return (
-        <div className="bg-gray-700 text-white py-4 text-center font-bold">
-            Music Player
+        <div className="flex">
+            <Sidebar />
+            <div className="w-[82%] h-[100vh] bg-[#171719]">
+                <Route />
+            </div>
         </div>
     )
 }
