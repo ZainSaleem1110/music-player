@@ -9,9 +9,6 @@ import AlbumCard from '../Components/AlbumCard'
 const MusicList1 = [
     { Image: Song01, name: "M.G'$ My Nigga", country: "Newyauk", time: "2:34" },
     { Image: Song01, name: "M.G'$ starring M", country: "Newyauk", time: "3:15" },
-]
-
-const MusicList2 = [
     { Image: Song02, name: "Mira hacia mi", country: "Newyauk", time: "1:50" },
     { Image: Song01, name: "M.G'$ My Nigga", country: "Newyauk", time: "2:34" },
     { Image: Song01, name: "M.G'$ starring M", country: "Newyauk", time: "3:15" },
@@ -28,9 +25,8 @@ function TopMusic() {
                         </div>
                         <h1 className="text-[22px] ml-3">Top Songs</h1>
                     </div>
-                    <div className="grid grid-cols-2 gap-8 w-[100%]">
+                    <div className="w-[100%]">
                         <MusicCard Data={MusicList1} />
-                        <MusicCard Data={MusicList2} />
                     </div>
                     <button className="text-[#f98f1d] bg-[#2C2C2F] px-14 py-1 rounded-full mt-10">
                         See All
