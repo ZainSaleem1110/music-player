@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import {BsMusicNoteBeamed,BsMusicNote,BsGraphUp,BsFillCalendarEventFill} from 'react-icons/bs'
 import {MdLibraryMusic,MdPlaylistPlay,MdReplay10} from 'react-icons/md'
 import {RiDropFill,RiExchangeDollarLine,RiPlayListFill} from 'react-icons/ri'
-import {FiBarChart} from 'react-icons/fi'
+import {FiBarChart,FiBox} from 'react-icons/fi'
 import {FaStoreAlt} from 'react-icons/fa'
 import {IoMdAppstore} from 'react-icons/io'
 import {AiOutlineStar} from 'react-icons/ai'
@@ -18,7 +18,7 @@ function Sidebar() {
             </div>
             <div className="text-white my-24 font-bold">
                 <h1 className="text-[12px] pl-6 text-[lightgray]">BROWSER MUSIC</h1>
-                <Link to="/discover" className="h-[40px] flex items-center text-[15px] pl-6  mt-3 btn active">
+                <Link to="/" className="h-[40px] flex items-center text-[15px] pl-6  mt-3 btn active">
                     <BsMusicNoteBeamed className="text-[20px]"/>
                     <span className="ml-7">Discover</span>
                 </Link>
@@ -39,7 +39,7 @@ function Sidebar() {
                     <span className="ml-7">Sportlight</span>
                 </Link>
                 <Link to="/genres" className="h-[40px] flex items-center text-[15px] pl-6 btn">
-                    <RiDropFill className="text-[20px]"/>
+                    <FiBox className="text-[20px]"/>
                     <span className="ml-7">Genres</span>
                 </Link>
                 <Link to="/playlists" className="h-[40px] flex items-center text-[15px] pl-6 btn">

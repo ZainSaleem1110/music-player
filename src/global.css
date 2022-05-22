@@ -43,10 +43,10 @@ body{
   background: #f98f1d;
 }
 
-.play{
+.play , .recentPlayed{
   visibility: hidden;
 }
 
-.songsCard:hover .play{
+.songsCard:hover .play , .card:hover .recentPlayed{
   visibility: visible;
 }
