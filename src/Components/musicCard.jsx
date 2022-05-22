@@ -8,7 +8,7 @@ function MusicCard({ Data }) {
     return (
         <div>
             {MusicListing.map((list, index) => {
-                return <div className="h-[60px] w-[100%] flex justify-between items-center px-5 text-white hover:bg-[#35434acc] cursor-pointer">
+                return <div className="h-[60px] w-[100%] flex justify-between items-center px-5 text-white hover:bg-[#35434acc] cursor-pointer border-b border-[#ffffff4d]">
                     <div className="flex items-center">
                         <h1>{index + 1}</h1>
                         <img src={list.Image} className="w-[40px] h-[40px] ml-6" alt="" />
