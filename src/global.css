@@ -50,3 +50,7 @@ body{
 .songsCard:hover .play , .card:hover .recentPlayed{
   visibility: visible;
 }
+
+.albumbg{
+  background-image: url("./assets/albumbg.png");
+}
