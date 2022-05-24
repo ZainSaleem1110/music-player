@@ -62,3 +62,7 @@ body{
 .sportlight_parent:hover .sportlight{
   visibility: visible;
 }
+
+.othersAlbum{
+  background-color: rgba(0, 0, 0, .6);
+}
