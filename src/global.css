@@ -54,3 +54,11 @@ body{
 .albumbg{
   background-image: url("./assets/albumbg.png");
 }
+
+.sportlight{
+  visibility: hidden;
+}
+
+.sportlight_parent:hover .sportlight{
+  visibility: visible;
+}
