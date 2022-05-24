@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 function MusicCard({ Data }) {
     const [MusicListing] = useState(Data)
     return (
-        <div className="grid grid-cols-2 gap-x-8">
+        <div className="">
             {MusicListing.map((list, index) => {
                 return <div className="h-[60px] w-[100%] flex justify-between items-center px-5 text-white hover:bg-[#35434acc] cursor-pointer border-b border-[#ffffff4d]">
                     <div className="flex items-center">
