@@ -9,6 +9,9 @@ function Navbar() {
     const handleLogin = () => {
         setLoginPage(true)
     }
+    const handleCloseLoginPage = () => {
+        setLoginPage(false)
+    }
 
     return (
         <>
@@ -27,7 +30,7 @@ function Navbar() {
                 </div>
             </div>
             {loginPage == true && (
-                <div className="absolute top-0 left-0 w-[100%] h-[100vh] text-[white] flex justify-center items-center" style={{ background: "rgba(255,255,255,.3)" }}>
+                <div className="absolute top-0 left-0 w-[100%] h-[100vh] text-[white] flex justify-center items-center" style={{ background: "rgba(255,255,255,.3)" }} onClick={handleCloseLoginPage}>
                     <Login />
                 </div>
             )}
