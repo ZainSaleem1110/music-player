@@ -1,16 +1,21 @@
 import React, { useState } from 'react'
 import { AiOutlineSearch } from 'react-icons/ai'
-import { Link } from 'react-router-dom'
 import Login from './Login'
+import Signup from './Signup'
 
 function Navbar() {
     const [loginPage, setLoginPage] = useState(false)
+    const [signPage, setSignPage] = useState(false)
 
     const handleLogin = () => {
         setLoginPage(true)
     }
     const handleCloseLoginPage = () => {
         setLoginPage(false)
+        setSignPage(false)
+    }
+    const handleSignup = () => {
+        setSignPage(true)
     }
 
     return (
@@ -24,7 +29,7 @@ function Navbar() {
                     <button className="h-[35px] w-[90px] rounded-md flex items-center justify-center text-[white]" onClick={handleLogin}>
                         Login
                     </button>
-                    <button className="h-[35px] w-[90px] rounded-md flex items-center justify-center text-[#f98f1d] bg-[#f9901f40]">
+                    <button className="h-[35px] w-[90px] rounded-md flex items-center justify-center text-[#f98f1d] bg-[#f9901f40]" onClick={handleSignup}>
                         Register
                     </button>
                 </div>
@@ -32,6 +37,11 @@ function Navbar() {
             {loginPage == true && (
                 <div className="absolute top-0 left-0 w-[100%] h-[100vh] text-[white] flex justify-center items-center z-50" style={{ background: "rgba(255,255,255,.3)" }} onClick={handleCloseLoginPage}>
                     <Login />
+                </div>
+            )}
+            {signPage == true && (
+                <div className="absolute top-0 left-0 w-[100%] h-[100vh] text-[white] flex justify-center items-center z-50" style={{ background: "rgba(255,255,255,.3)" }} onClick={handleCloseLoginPage}>
+                    <Signup />
                 </div>
             )}
         </>
