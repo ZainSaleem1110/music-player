@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-import Song01 from '../assets/songs1.jpeg'
 import { BsThreeDots } from 'react-icons/bs'
-import { Link } from 'react-router-dom'
 
 function MusicCard({ Data }) {
     const [MusicListing] = useState(Data)
