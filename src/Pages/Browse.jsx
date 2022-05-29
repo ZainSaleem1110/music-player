@@ -7,7 +7,6 @@ function Browse() {
     return (
         <div className="text-[white]">
             <Tabs />
-
         </div>
     )
 }
