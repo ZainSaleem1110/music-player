@@ -88,12 +88,12 @@ function Sidebar() {
                         
                     </div>
                     <div className="flex flex-wrap mt-2">
-                        <Link to="/" className="hover:text-white">DMCA .</Link>
-                        <Link to="/" className="hover:text-white ml-1">Blogs .</Link>
-                        <Link to="/" className="hover:text-white ml-1">About US .</Link>
-                        <Link to="/" className="hover:text-white ml-1">Terms .</Link>
-                        <Link to="/" className="hover:text-white ml-1">Contact .</Link>
-                        <Link to="/" className="hover:text-white ml-1">Privacy Policy</Link>
+                        <Link to="/dmca" className="hover:text-white">DMCA .</Link>
+                        <Link to="/blog" className="hover:text-white ml-1">Blogs .</Link>
+                        <Link to="/aboutUs" className="hover:text-white ml-1">About US .</Link>
+                        <Link to="/terms" className="hover:text-white ml-1">Terms .</Link>
+                        <Link to="/contact" className="hover:text-white ml-1">Contact .</Link>
+                        <Link to="/policy" className="hover:text-white ml-1">Privacy Policy</Link>
                     </div>
                 </div>
             </div>

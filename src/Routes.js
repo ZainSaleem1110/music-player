@@ -16,6 +16,12 @@ import Recent from './Pages/RecentPlayed'
 import MyPlaylist from './Pages/MyPlaylist'
 import Favourite from './Pages/favourite'
 import Event from './Pages/Events'
+import DMCA from './Pages/DMCA'
+import Aboutus from './Pages/Aboutus'
+import Terms from './Pages/Terms'
+import Privacy from './Pages/Privacy'
+import ContactUs from './Pages/Contact'
+import Blog from './Pages/Blog'
 
 function Routeing() {
     return (
@@ -38,6 +44,12 @@ function Routeing() {
                     <Route path="/myPlaylist" element={<MyPlaylist />} />
                     <Route path="/favourite" element={<Favourite />} />
                     <Route path="/event" element={<Event />} />
+                    <Route path="/dmca" element={<DMCA />} />
+                    <Route path="/aboutus" element={<Aboutus />} />
+                    <Route path="/terms" element={<Terms />} />
+                    <Route path="/policy" element={<Privacy />} />
+                    <Route path="/contact" element={<ContactUs />} />
+                    <Route path="/blog" element={<Blog />} />
                 </Routes>
             </div>
         </div>

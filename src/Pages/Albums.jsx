@@ -1,6 +1,6 @@
 import React from 'react'
-import { MdLibraryMusic } from 'react-icons/md'
 import {BsMusicNoteBeamed} from 'react-icons/bs'
+import { MdLibraryMusic } from 'react-icons/md'
 
 function Albums() {
     return (
