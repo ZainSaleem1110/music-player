@@ -3,8 +3,8 @@ import { BsThreeDots } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
 
 function MusicCard({ Data }) {
-    const navigate = useNavigate()
     const [MusicListing] = useState(Data)
+    const navigate = useNavigate()
     const handleDetailPage = () => {
         navigate('/songPlay')
     }

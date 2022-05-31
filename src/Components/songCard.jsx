@@ -1,12 +1,17 @@
 import React, { useState } from 'react'
 import { FaPlay } from 'react-icons/fa'
+import {useNavigate} from 'react-router-dom'
 
 function SongCard({ Data }) {
     const [recentPlayed] = useState(Data)
+    const navigate = useNavigate()
+    const handleDetailPage = () => {
+        navigate('/songPlay')
+    }
     return (
         <div className="flex gap-5 mt-7">
             {recentPlayed && recentPlayed.map((listing, index) => {
-                return <div className="cursor-pointer card">
+                return <div className="cursor-pointer card" onClick={handleDetailPage}>
                     <div className="w-[140px] h-[140px] rounded-lg relative">
                         <img src={listing.Image} className="rounded-lg" alt="" />
                         <div className="absolute top-0 left-0 w-[100%] h-[100%] bg-[#35434acc] flex justify-center items-center recentPlayed rounded-lg">
