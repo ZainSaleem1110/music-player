@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ Fragment } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Song01 from '../assets/songs1.jpeg'
 import Wave from '../assets/wave.PNG'
@@ -6,6 +6,7 @@ import { ImUsers } from 'react-icons/im'
 import { BsMusicNoteBeamed, BsPlayCircle, BsPlayFill, BsFillHeartFill, BsFillShareFill, BsStarFill, BsThreeDots, BsEmojiSmile } from 'react-icons/bs'
 import { IoMdHeartDislike } from 'react-icons/io'
 import { FaCommentAlt, FaFolderPlus } from 'react-icons/fa'
+import { Menu, Transition } from '@headlessui/react'
 
 const Card = [
     { Img: Song01, Name: "Mira hacia mí", detail: "Newyauk" },
@@ -14,6 +15,9 @@ const Card = [
     { Img: Song01, Name: "The Bed Breaks Louder", detail: "Newyauk" },
 ]
 
+function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+  }
 function SongPlayPage() {
     const navigate = useNavigate()
     const hanleOpenOtherPage = () => {
@@ -22,8 +26,8 @@ function SongPlayPage() {
     return (
         <div className="text-white py-2">
             <div className="px-5 bg-[#252528]">
-                <div className="flex sm:flex-row flex-col justify-between items-center">
-                    <p className="sm:mt-0 mt-3">Published about a month ago in <span className="cursor-pointer text-[#f98f1d]" onClick={hanleOpenOtherPage}>Other</span></p>
+                <div className="flex sm:flex-row flex-col justify-between items-center pt-3">
+                    <p className="">Published about a month ago in <span className="cursor-pointer text-[#f98f1d]" onClick={hanleOpenOtherPage}>Other</span></p>
                     <div className="flex items-center sm:mt-0 mt-3">
                         <div className="w-[40px] h-[40px] rounded-full">
                             <img src={Song01} className="rounded-full" alt="" />
@@ -99,10 +103,42 @@ function SongPlayPage() {
                         <BsFillShareFill />
                         <span className="ml-2 font-bold">Share</span>
                     </button>
-                    <button className="w-[100px] h-[40px] rounded-md bg-[#ffffff] text-[black] flex items-center justify-center ml-4">
-                        <BsThreeDots />
-                        <span className="ml-2 font-bold">More</span>
-                    </button>
+                        <Menu as="div" className="relative inline-block text-left">
+                            <div>
+                                <Menu.Button className="w-[100px] h-[40px] rounded-md bg-[#ffffff] text-[black] font-bold flex items-center justify-center ml-4">
+                                    <BsThreeDots className="text-[16px] mr-2 text-[black]" aria-hidden="true" />
+                                    More
+                                </Menu.Button>
+                            </div>
+
+                            <Transition
+                                as={Fragment}
+                                enter="transition ease-out duration-100"
+                                enterFrom="transform opacity-0 scale-95"
+                                enterTo="transform opacity-100 scale-100"
+                                leave="transition ease-in duration-75"
+                                leaveFrom="transform opacity-100 scale-100"
+                                leaveTo="transform opacity-0 scale-95"
+                            >
+                                <Menu.Items className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-[#222225] ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
+                                    <div className="py-1">
+                                        <Menu.Item>
+                                            {({ active }) => (
+                                                <a
+                                                    href="#"
+                                                    className={classNames(
+                                                        active ? 'bg-[#2c2c2f] text-[#cccccc]' : 'text-[#cccccc]',
+                                                        'block px-4 py-2 text-sm'
+                                                    )}
+                                                >
+                                                    Add to Playlist
+                                                </a>
+                                            )}
+                                        </Menu.Item>
+                                    </div>
+                                </Menu.Items>
+                            </Transition>
+                        </Menu>
                 </div>
                 <p>$1.99</p>
             </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { BsThreeDots } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
+import Dropdown from './Dropdown'
 
 function MusicCard({ Data }) {
     const [MusicListing] = useState(Data)
@@ -23,20 +23,12 @@ function MusicCard({ Data }) {
                     <div className="flex items-center">
                         <h3>{list.time}</h3>
                         <div>
-                            <BsThreeDots className="ml-3 cursor-pointer" />
+                            <Dropdown/>
                         </div>
                     </div>
                 </div>
             })
             }
-            {/* <div className="absolute right-0 bottom-0 bg-[#222225] rounded-lg">
-                <div className="h-[36px] hover:bg-[#2c2c2f] flex items-center px-3">
-                    Add to Playlist
-                </div>
-                <div className="h-[36px] hover:bg-[#2c2c2f] flex items-center px-3">
-                    Share
-                </div>
-            </div> */}
         </>
     )
 }
