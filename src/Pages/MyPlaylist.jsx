@@ -3,6 +3,7 @@ import { MdPlaylistPlay, MdPlaylistAdd } from 'react-icons/md'
 import Img from '../assets/sidu.jpg'
 import { BsMusicNoteBeamed, BsThreeDots, BsCameraFill } from 'react-icons/bs'
 import { BiWorld } from 'react-icons/bi'
+import { Link } from 'react-router-dom'
 
 function MyPlaylist() {
     const [createModal, setCreateModal] = useState(0)
@@ -28,7 +29,7 @@ function MyPlaylist() {
                         <p className="ml-1">Create</p>
                     </button>
                 </div>
-                <div className="w-[340px] h-[102px] rounded-lg border border-[#ffffff4d] mt-6 flex justify-between">
+                <Link to="/myPlaylistDetail" className="w-[340px] h-[102px] rounded-lg border border-[#ffffff4d] mt-6 flex justify-between">
                     <div className="flex">
                         <img src={Img} className="rounded-l" alt="" />
                         <div className="flex flex-col justify-center ml-3">
@@ -46,7 +47,7 @@ function MyPlaylist() {
                     <div className="pr-5 mt-4 text-[#ffffff4d]">
                         <BsThreeDots />
                     </div>
-                </div>
+                </Link>
             </div>
             {createModal == 1 && (
                 <div className="absolute top-0 left-0 w-[100%] h-[100vh] text-[white] flex justify-center items-center z-50" style={{ background: "rgba(255,255,255,.3)" }} onClick={handleCloseModal}>

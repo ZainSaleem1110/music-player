@@ -27,6 +27,7 @@ import AlbumDetailPage from './Components/AlbumDetailPage'
 import OtherDetailPage from './Components/OtherDetail'
 import PlaylistDetail from './Components/PlaylistDetail'
 import MobileNavbar from './Components/mobileNavbar'
+import MyPlaylistDetail from './Components/myPlaylistDetail'
 
 function Routeing() {
     return (
@@ -64,6 +65,7 @@ function Routeing() {
                     <Route path="/albumDetail" element={<AlbumDetailPage />} />
                     <Route path="/otherDetail" element={<OtherDetailPage />} />
                     <Route path="/playlistDetail" element={<PlaylistDetail />} />
+                    <Route path="/myPlaylistDetail" element={<MyPlaylistDetail />} />
                 </Routes>
             </div>
         </div>
