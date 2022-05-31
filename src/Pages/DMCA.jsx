@@ -5,12 +5,18 @@ function DMCA() {
     return (
         <div className="text-[#d2d2d2]">
             <div className="text-[15px] flex justify-center items-center border-b-2 border-[#323232] pb-3 font-bold">
-                <Link to='/aboutus' className="flex justify-center items-center w-[140px]">ABOUT US</Link>
-                <Link to='/terms' className="flex justify-center items-center w-[115px]">TERMS</Link>
-                <Link to='/policy' className="flex justify-center items-center w-[190px]">PRIVACY POLICY</Link>
-                <Link to='/dmca' className="relative text-[#ef8f1d] flex justify-center items-center w-[106px]">
+                <Link to='/aboutus' className="flex justify-center items-center sm:w-[140px] w-[100px] text-[14px] ">
+                    ABOUT US
+                </Link>
+                <Link to='/terms' className="flex justify-center items-center sm:w-[115px] w-[80px] text-[14px] ">
+                    TERMS
+                </Link>
+                <Link to='/policy' className="flex justify-center items-center sm:w-[190px] w-[165px] text-[14px] ">
+                    PRIVACY POLICY
+                </Link>
+                <Link to='/dmca' className="flex relative text-[#ef8f1d] justify-center items-center sm:w-[106px] text-[14px] w-[70px] ">
+                    <div className="absolute bottom-[-14px] left-0 h-[2px] sm:w-[106px] w-[70px] bg-[#ef8f1d]"></div>
                     DMCA
-                    <div className="absolute bottom-[-14px] left-0 h-[2px] w-[106px] bg-[#ef8f1d]"></div>
                 </Link>
             </div>
             <div className="bg-[#222225] rounded-lg p-3 mt-7">

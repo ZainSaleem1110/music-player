@@ -67,3 +67,10 @@ body{
 .othersAlbum{
   background-color: rgba(0, 0, 0, .6);
 }
+
+.profileDrop{
+  visibility: hidden;
+}
+.sidebar{
+  width: 0%;
+}

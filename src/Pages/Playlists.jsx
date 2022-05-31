@@ -2,8 +2,14 @@ import React from 'react'
 import { MdPlaylistPlay } from 'react-icons/md'
 import { BsMusicNoteBeamed } from 'react-icons/bs'
 import Song01 from '../assets/songs1.jpeg'
+import { useNavigate } from 'react-router-dom'
 
 function Playlists() {
+    const navigate = useNavigate()
+const handleDetail=()=>{
+    navigate("/playlistDetail")
+}
+
     return (
         <div className="text-[white]">
             <div className="flex items-center text-white border-b border-[#ffffff4d] pb-3">
@@ -12,7 +18,7 @@ function Playlists() {
                 </div>
                 <h1 className="text-[22px] ml-3 text-[#e91e63]">Playlists</h1>
             </div>
-            <div className="w-[200px] bg-[#222225] border border-[#ffffff4d] mt-6 rounded-lg cursor-pointer">
+            <div className="w-[200px] bg-[#222225] border border-[#ffffff4d] mt-6 rounded-lg cursor-pointer" onClick={handleDetail}>
                 <div className=" mt-3">
                     <div className="flex px-3 items-center">
                         <img src={Song01} className="w-[35px] h-[35px] rounded-full" alt="" />

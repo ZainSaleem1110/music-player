@@ -37,21 +37,21 @@ const PointsList = [
 function Points() {
     return (
         <div className="text-[white]">
-            <div className="flex items-center mt-2">
+            <div className="flex sm:flex-row flex-col items-center mt-2">
                 <img src={PointsImg} alt="" />
                 <div className="ml-8">
-                    <h1 className="text-[32px]">
+                    <h1 className="sm:text-[32px] text-[24px]">
                         Points System
                         <span className="text-[#F98F1D] text-[14px] tracking-widest ml-3">(1 Point = 0.001 USD)</span>
                     </h1>
-                    <div className="mt-4 flex items-center gap-x-4">
+                    <div className="mt-4 flex md:flex-row flex-col items-center gap-x-4">
                         <div className="w-[260px] h-[115px] bg-[#3a3116] text-[#FFC107] rounded-lg flex items-center justify-center">
                             <h1 className="text-[75px] flex items-center">
                                 0.00
                                 <span className="text-[19px] font-bold tracking-widest ml-3">points</span>
                             </h1>
                         </div>
-                        <div className="w-[260px] h-[115px] bg-[#1f2e21] text-[#4CAF50] rounded-lg flex items-center justify-center">
+                        <div className="w-[260px] h-[115px] bg-[#1f2e21] text-[#4CAF50] rounded-lg flex items-center justify-center md:mt-0 mt-4">
                             <h1 className="text-[75px] flex items-center">
                                 $0.00
                             </h1>

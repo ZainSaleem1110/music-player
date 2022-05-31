@@ -35,7 +35,7 @@ function SportLight() {
                     </div>
                 </div>
                 <div className="ml-14 mt-4 sportlight_parent">
-                    <div className="py-3 w-[64%] flex justify-between items-center px-3 text-white hover:bg-[#ffffff0d] bg-[#222225] cursor-pointer rounded-lg">
+                    <div className="py-3 md:w-[64%] w-[100%] flex justify-between items-center px-3 text-white hover:bg-[#ffffff0d] bg-[#222225] cursor-pointer rounded-lg">
                         <div className="flex items-center">
                             <div className="relative w-[70px] h-[70px]">
                                 <img src={Song01} className="w-[70px] h-[70px] rounded-sm" alt="" />

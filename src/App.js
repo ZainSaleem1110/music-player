@@ -6,7 +6,7 @@ function App() {
     return (
         <div className="flex">
             <Sidebar />
-            <div className="w-[82%] h-[100vh] bg-[#171719]">
+            <div className="lg:w-[82%] md:w-[92%] w-[100%] h-[100vh] bg-[#171719]">
                 <Routing />
             </div>
         </div>

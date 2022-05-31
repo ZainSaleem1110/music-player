@@ -6,8 +6,8 @@ import {FiBox} from "react-icons/fi"
 
 function BrowseMusicCard() {
     return (
-        <div className="flex gap-x-8 items-start">
-            <div className="w-[75%]">
+        <div className="flex sm:flex-row flex-col gap-x-8 items-start">
+            <div className="sm:w-[75%] w-[100%]">
                 <div className="h-[112px] bg-[#222225] rounded-lg flex items-center px-3 text-white">
                     <img src={Song01} className="w-[90px] h-[90px] rounded-lg" alt="" />
                     <div className="w-[100%] ml-3">
@@ -16,7 +16,7 @@ function BrowseMusicCard() {
                             <p className="text-[14px] text-[#bdbdbe]">Newyauk</p>
                         </div>
                         <div className="flex justify-end w-[85%]">
-                            <div className="w-[55%] flex justify-between items-center text-[14px] mt-3">
+                            <div className="md:w-[55%] sm:w-[70%] w-[90%] flex justify-between items-center text-[14px] mt-3">
                                 <p>1:27</p>
                                 <p>about a month ago</p>
                                 <div className="cursor-pointer">
@@ -32,7 +32,7 @@ function BrowseMusicCard() {
                     </button>
                 </div>
             </div>
-            <div className="w-[25%] ">
+            <div className="sm:w-[25%] w-[100%] sm:mt-0 mt-5">
                 <div className="bg-[#222225] rounded-lg p-3">
                     <div className="flex items-center">
                         <div className="w-[30px] h-[30px] bg-[#7367f0] rounded-full flex justify-center items-center"><FaRegMoneyBillAlt /></div>

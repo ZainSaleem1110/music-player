@@ -5,12 +5,12 @@ import {BsMusicNoteBeamed} from 'react-icons/bs'
 
 function ProductTabPage() {
     return (
-            <div className="flex gap-x-8 items-start">
-            <div className="w-[75%] h-[277px] bg-[#222225] rounded-lg flex flex-col items-center text-white justify-center ">
+            <div className="flex sm:flex-row flex-col gap-x-8 items-start">
+            <div className="sm:w-[75%] w-[100%] h-[277px] bg-[#222225] rounded-lg flex flex-col items-center text-white justify-center ">
                 <BsMusicNoteBeamed className="text-[28px]" />
                 <p className="text-[20px] mt-3">No more songs</p>
             </div>
-            <div className="w-[25%] ">
+            <div className="sm:w-[25%] w-[100%] sm:mt-0 mt-5">
                 <div className="bg-[#222225] rounded-lg p-3">
                     <div className="flex items-center">
                         <div className="w-[30px] h-[30px] bg-[#7367f0] rounded-full flex justify-center items-center"><FaRegMoneyBillAlt /></div>

@@ -25,7 +25,7 @@ function TopMusic() {
                         </div>
                         <h1 className="text-[22px] ml-3">Top Songs</h1>
                     </div>
-                    <div className="w-[100%]">
+                    <div className="w-[100%] grid md:grid-cols-2 grid-col gap-x-5">
                         <MusicCard Data={MusicList1} />
                     </div>
                     <button className="text-[#f98f1d] bg-[#2C2C2F] px-14 py-1 rounded-full mt-10">

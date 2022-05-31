@@ -5,13 +5,13 @@ function Aboutus() {
     return (
         <div className="text-[#d2d2d2]">
             <div className="text-[15px] flex justify-center items-center border-b-2 border-[#323232] pb-3 font-bold">
-                <Link to='/aboutus' className="flex relative text-[#ef8f1d] justify-center items-center w-[140px]">
+                <Link to='/aboutus' className="flex relative text-[#ef8f1d] justify-center items-center sm:w-[140px] w-[100px] text-[14px] ">
                     ABOUT US
-                    <div className="absolute bottom-[-14px] left-0 h-[2px] w-[140px] bg-[#ef8f1d]"></div>
+                    <div className="absolute bottom-[-14px] left-0 h-[2px] sm:w-[140px] w-[100px] bg-[#ef8f1d]"></div>
                 </Link>
-                <Link to='/terms' className="flex justify-center items-center w-[115px]">TERMS</Link>
-                <Link to='/policy' className="flex justify-center items-center w-[190px]">PRIVACY POLICY</Link>
-                <Link to='/dmca' className="flex justify-center items-center w-[106px]">
+                <Link to='/terms' className="flex justify-center items-center sm:w-[115px] w-[80px] text-[14px] ">TERMS</Link>
+                <Link to='/policy' className="flex justify-center items-center sm:w-[190px] w-[165px] text-[14px] ">PRIVACY POLICY</Link>
+                <Link to='/dmca' className="flex justify-center items-center sm:w-[106px] text-[14px] w-[70px] ">
                     DMCA
                 </Link>
             </div>

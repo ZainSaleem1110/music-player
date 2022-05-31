@@ -22,11 +22,21 @@ import Terms from './Pages/Terms'
 import Privacy from './Pages/Privacy'
 import ContactUs from './Pages/Contact'
 import Blog from './Pages/Blog'
+import SongPlayPage from './Components/SongPlayPage'
+import AlbumDetailPage from './Components/AlbumDetailPage'
+import OtherDetailPage from './Components/OtherDetail'
+import PlaylistDetail from './Components/PlaylistDetail'
+import MobileNavbar from './Components/mobileNavbar'
 
 function Routeing() {
     return (
-        <div className="overflow-y-auto h-[100vh]">
-            <Navbar />
+        <div className="overflow-y-auto overflow-x-hidden w-[100%] h-[100vh]">
+            <div className="md:flex hidden">
+                <Navbar />
+            </div>
+            <div className="md:hidden flex">
+                <MobileNavbar />
+            </div>
             <div className="px-4 py-10">
                 <Routes>
                     <Route path="/" element={<Discover />} />
@@ -50,6 +60,10 @@ function Routeing() {
                     <Route path="/policy" element={<Privacy />} />
                     <Route path="/contact" element={<ContactUs />} />
                     <Route path="/blog" element={<Blog />} />
+                    <Route path="/songPlay" element={<SongPlayPage />} />
+                    <Route path="/albumDetail" element={<AlbumDetailPage />} />
+                    <Route path="/otherDetail" element={<OtherDetailPage />} />
+                    <Route path="/playlistDetail" element={<PlaylistDetail />} />
                 </Routes>
             </div>
         </div>

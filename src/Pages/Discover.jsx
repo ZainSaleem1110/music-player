@@ -33,7 +33,7 @@ function Discover() {
             <StandardCard Data={SongsList} />
             <RecentPlayed />
             <NewRealease />
-            <div className="grid grid-cols-2 mt-20 gap-8">
+            <div className="grid md:grid-cols-2 grid-col mt-20 gap-8">
                 <div className="">
                     <div className="flex items-center text-white border-b border-[#ffffff4d] w-[100%] pb-3 mb-4">
                         <div className="w-[32px] h-[32px] bg-[#9c27b0] flex justify-center items-center rounded-full">

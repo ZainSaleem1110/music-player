@@ -11,12 +11,12 @@ function Blog() {
                 <BsFillCreditCard2FrontFill />
                 Blogs
             </div>
-            <div className="flex gap-x-8 items-start mt-7">
-                <div className="w-[75%] h-[277px] bg-[#222225] rounded-lg flex flex-col items-center text-white justify-center ">
+            <div className="flex md:flex-row flex-col gap-x-8 items-start mt-7">
+                <div className="lg:w-[75%] md:lg-[55%] w-[100%] h-[277px] bg-[#222225] rounded-lg flex flex-col items-center text-white justify-center ">
                     <BsFillCreditCard2FrontFill className="text-[28px]" />
                     <p className="text-[20px] mt-3">No more articles to show</p>
                 </div>
-                <div className="w-[25%] ">
+                <div className="lg:w-[25%] md:w-[45%] w-[100%] md:mt-0 mt-5">
                     <div className="bg-[#222225] rounded-lg p-3">
                         <div className="flex items-center">
                             <div className="w-[30px] h-[30px] bg-[#F98F1D] rounded-full flex justify-center items-center"><FaRegMoneyBillAlt /></div>
