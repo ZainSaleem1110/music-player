@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { AiOutlineSearch } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import LoginImg from '../assets/login.svg'
-import Logo from '../assets/logo.png'
+import Logo from '../assets/logo.jpeg'
 import { CgProfile } from 'react-icons/cg'
 
 function Navbar() {
@@ -29,9 +29,9 @@ function Navbar() {
 
     return (
         <>
-            <div className="h-[60px] w-[100%] bg-[#222225] flex px-6 justify-between items-center border border-[black]">
-                <img src={Logo} className="w-[100px] mr-5 lg:hidden flex" alt="" />
-                <div className="bg-[black] rounded-xl h-[40px] w-[470px] flex px-4 text-[lightgray] text-[16px] items-center">
+            <div className="h-[60px] w-[100%] bg-[black] flex px-6 justify-between items-center border border-[black]">
+                <img src={Logo} className="w-[50px] mr-5 lg:hidden flex" alt="" />
+                <div className="bg-[#222225] rounded-xl h-[40px] w-[470px] flex px-4 text-[lightgray] text-[16px] items-center">
                     <AiOutlineSearch />
                     <input type="text" placeholder="Search for songs, artists, playlists and more..." className="border-none focus:outline-none bg-[transparent] ml-4 w-[100%]" />
                 </div>

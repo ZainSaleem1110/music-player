@@ -3,7 +3,7 @@ import { AiOutlineSearch, AiOutlineClose,AiOutlineStar } from 'react-icons/ai'
 import { CgProfile } from 'react-icons/cg'
 import { FaBars,FaStoreAlt } from 'react-icons/fa'
 import LoginImg from '../assets/login.svg'
-import Logo from '../assets/logo.png'
+import Logo from '../assets/logo.jpeg'
 import { Link } from 'react-router-dom'
 import { BsMusicNoteBeamed, BsMusicNote, BsGraphUp, BsFillCalendarEventFill } from 'react-icons/bs'
 import { MdLibraryMusic, MdPlaylistPlay, MdReplay10,MdOutlineSearch } from 'react-icons/md'
@@ -56,12 +56,12 @@ function MobileNavbar() {
 
     return (
         <>
-            <div className="h-[60px] w-[100%] bg-[#222225] flex px-6 justify-between items-center border border-[black]">
+            <div className="h-[60px] w-[100%] bg-[black] flex px-6 justify-between items-center border border-[black]">
                 {searchbar == 0 && (
                     <>
                         <div className="flex items-center">
                             <FaBars className="text-white text-[20px] mr-5" onClick={sidebar} />
-                            <img src={Logo} className="w-[100px]" alt="" />
+                            <img src={Logo} className="w-[50px]" alt="" />
                         </div>
                         <div className="flex gap-x-3 text-[white] text-[24px]">
                             <MdOutlineSearch onClick={handleSearchbar} />

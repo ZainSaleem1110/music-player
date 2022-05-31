@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../assets/logo.png'
+import Logo from '../assets/logo.jpeg'
 import { Link } from 'react-router-dom'
 import { BsMusicNoteBeamed, BsMusicNote, BsGraphUp, BsFillCalendarEventFill } from 'react-icons/bs'
 import { MdLibraryMusic, MdPlaylistPlay, MdReplay10 } from 'react-icons/md'
@@ -14,8 +14,8 @@ function Sidebar() {
     return (
         <>
             <div className="lg:w-[18%] w-[70px] h-[100vh] bg-[#222225] overflow-y-auto md:flex hidden overflow-x-hidden">
-                <div className="py-2 flex justify-center fixed top-0 left-0 w-[18%] bg-[#222225] lg:flex hidden">
-                    <img src={Logo} className="w-[70%]" alt="" />
+                <div className="flex bg-[black] justify-center fixed top-0 left-0 w-[18%] bg-[#222225] lg:flex hidden h-[60px]">
+                    <img src={Logo} className="w-[50px]" alt="" />
                 </div>
                 <div className="text-white lg:my-24 my-4 font-bold">
                     <h1 className="text-[12px] pl-6 text-[lightgray] lg:flex hidden">BROWSER MUSIC</h1>
