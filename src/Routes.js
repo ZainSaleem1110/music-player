@@ -28,6 +28,7 @@ import OtherDetailPage from './Components/OtherDetail'
 import PlaylistDetail from './Components/PlaylistDetail'
 import MobileNavbar from './Components/mobileNavbar'
 import MyPlaylistDetail from './Components/myPlaylistDetail'
+import Loyality from './Components/Loyality'
 
 function Routeing() {
     return (
@@ -66,6 +67,7 @@ function Routeing() {
                     <Route path="/otherDetail" element={<OtherDetailPage />} />
                     <Route path="/playlistDetail" element={<PlaylistDetail />} />
                     <Route path="/myPlaylistDetail" element={<MyPlaylistDetail />} />
+                    <Route path="/loyality" element={<Loyality />} />
                 </Routes>
             </div>
         </div>

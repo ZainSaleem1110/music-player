@@ -2,7 +2,7 @@ import React from 'react'
 import Logo from '../assets/logo.jpeg'
 import { Link } from 'react-router-dom'
 import { BsMusicNoteBeamed, BsMusicNote, BsGraphUp, BsFillCalendarEventFill } from 'react-icons/bs'
-import { MdLibraryMusic, MdPlaylistPlay, MdReplay10 } from 'react-icons/md'
+import { MdLibraryMusic,MdLoyalty, MdPlaylistPlay, MdReplay10 } from 'react-icons/md'
 import { RiDropFill, RiExchangeDollarLine, RiPlayListFill } from 'react-icons/ri'
 import { FiBarChart, FiBox } from 'react-icons/fi'
 import { FaStoreAlt } from 'react-icons/fa'
@@ -14,8 +14,8 @@ function Sidebar() {
     return (
         <>
             <div className="lg:w-[18%] w-[70px] h-[100vh] bg-[#222225] overflow-y-auto md:flex hidden overflow-x-hidden">
-                <div className="flex bg-[black] justify-center fixed top-0 left-0 w-[18%] bg-[#222225] lg:flex hidden h-[60px]">
-                    <img src={Logo} className="w-[50px]" alt="" />
+                <div className="flex bg-[black] items-center justify-center fixed top-0 left-0 w-[18%] bg-[#222225] lg:flex hidden h-[60px]">
+                    <img src={Logo} className="w-[50px] h-[47px]" alt="" />
                 </div>
                 <div className="text-white lg:my-24 my-4 font-bold">
                     <h1 className="text-[12px] pl-6 text-[lightgray] lg:flex hidden">BROWSER MUSIC</h1>
@@ -88,14 +88,17 @@ function Sidebar() {
                         <BsFillCalendarEventFill className="text-[20px]" />
                         <span className="ml-7">Events</span>
                     </Link>
+                    <Link to="/loyality" className="h-[40px] flex items-center text-[15px] pl-6  lg:mt-3 mt-7 btn">
+                        <MdLoyalty className="text-[20px]" />
+                        <span className="ml-7">Loyality</span>
+                    </Link>
                     <div className="h-[1px] bg-[gray] w-[87%] my-5 ml-3 lg:flex hidden"></div>
                     <div className="lg:flex hidden">
                         <div className="px-6 text-[12px] text-[#B0B0B0]">
                             <div className="flex justify-between">
                                 <h1>© 2022 newyauk</h1>
-
                             </div>
-                            <div className="flex flex-wrap mt-2">
+                            <div className="flex flex-wrap mt-2 pb-5">
                                 <Link to="/dmca" className="hover:text-white">DMCA .</Link>
                                 <Link to="/blog" className="hover:text-white ml-1">Blogs .</Link>
                                 <Link to="/aboutUs" className="hover:text-white ml-1">About US .</Link>
