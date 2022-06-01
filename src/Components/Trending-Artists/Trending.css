@@ -1,0 +1,13 @@
+.trending-box {
+  flex-direction: column;
+  gap: 10px;
+}
+.trending-artist-img {
+  max-width: 120px;
+  border-radius: 0 50% 50%;
+}
+.artist-name {
+  color: #d2d2d2;
+  font-size: 0.94rem;
+  font-weight: 500;
+}

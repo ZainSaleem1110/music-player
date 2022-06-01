@@ -2,7 +2,7 @@ import React from 'react'
 
 function Loyality() {
     return (
-        <div className="w-[100%] flex justify-center items-center h-[80vh]">
+        <div className="w-[100%] flex justify-center items-center h-[70vh]">
         <div className="flex flex-col items-center justify-center w-[400px]">
             <h1 className="text-[#f98f1d] text-[40px] font-bold">Loyalty Splits</h1>
             <p className="mt-4 text-[#ffffff4d]">It's never been easier to share your success</p>
