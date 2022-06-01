@@ -7,9 +7,9 @@ function LandFooter() {
     <footer className="footer flex">
       <h2>Copyright © 2022 Lorem.</h2>
       <div className="center-footer flex">
-        <a href="#" className="foot-link">
+        <button className="foot-link">
           Blogs
-        </a>
+        </button>
         <a href="#" className="foot-link">
           About Us
         </a>

@@ -1,4 +1,4 @@
-import React, { useState, Fragment  } from 'react'
+import React, { useState, Fragment } from 'react'
 import { AiOutlineSearch, AiOutlineClose, AiOutlineStar } from 'react-icons/ai'
 import { CgProfile } from 'react-icons/cg'
 import { FaBars, FaStoreAlt } from 'react-icons/fa'
@@ -6,14 +6,14 @@ import LoginImg from '../assets/login.svg'
 import Logo from '../assets/logo.jpeg'
 import { Link } from 'react-router-dom'
 import { BsMusicNoteBeamed, BsMusicNote, BsGraphUp, BsFillCalendarEventFill } from 'react-icons/bs'
-import { MdLibraryMusic, MdPlaylistPlay, MdReplay10, MdOutlineSearch } from 'react-icons/md'
+import { MdLibraryMusic, MdPlaylistPlay,MdLoyalty, MdReplay10, MdOutlineSearch } from 'react-icons/md'
 import { RiDropFill, RiExchangeDollarLine, RiPlayListFill } from 'react-icons/ri'
 import { FiBarChart, FiBox } from 'react-icons/fi'
 import { IoMdAppstore } from 'react-icons/io'
 import { Menu, Transition } from '@headlessui/react'
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+    return classes.filter(Boolean).join(' ')
 }
 
 function MobileNavbar() {
@@ -65,55 +65,55 @@ function MobileNavbar() {
                             <img src={Logo} className="w-[50px]" alt="" />
                         </div>
                         <div className="flex items-center">
-                            <MdOutlineSearch className="text-white text-[20px]" onClick={handleSearchbar}/>
-                        <Menu as="div" className="relative inline-block text-left">
-                            <div>
-                                <Menu.Button className="inline-flex justify-center w-full rounded-md px-4 py-2 text-sm font-medium focus:outline-none text-white">
-                                    <CgProfile className="-mr-1 ml-2 h-6 w-6" aria-hidden="true" />
-                                </Menu.Button>
-                            </div>
+                            <MdOutlineSearch className="text-white text-[20px]" onClick={handleSearchbar} />
+                            <Menu as="div" className="relative inline-block text-left">
+                                <div>
+                                    <Menu.Button className="inline-flex justify-center w-full rounded-md px-4 py-2 text-sm font-medium focus:outline-none text-white">
+                                        <CgProfile className="-mr-1 ml-2 h-6 w-6" aria-hidden="true" />
+                                    </Menu.Button>
+                                </div>
 
-                            <Transition
-                                as={Fragment}
-                                enter="transition ease-out duration-100"
-                                enterFrom="transform opacity-0 scale-95"
-                                enterTo="transform opacity-100 scale-100"
-                                leave="transition ease-in duration-75"
-                                leaveFrom="transform opacity-100 scale-100"
-                                leaveTo="transform opacity-0 scale-95"
-                            >
-                                <Menu.Items className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-[#222225] ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
-                                    <div className="py-1">
-                                        <Menu.Item>
-                                            {({ active }) => (
-                                                <button
-                                                    className={classNames(
-                                                        active ? 'bg-[#2c2c2f] text-[#cccccc]' : 'text-[#cccccc]',
-                                                        'block px-4 py-2 text-sm'
-                                                    )}
-                                                    onClick={handleLogin}
-                                                >
-                                                    Login
-                                                </button>
-                                            )}
-                                        </Menu.Item>
-                                        <Menu.Item>
-                                            {({ active }) => (
-                                                <button
-                                                    className={classNames(
-                                                        active ? 'bg-[#2c2c2f] text-[#cccccc]' : 'text-[#cccccc]',
-                                                        'block px-4 py-2 text-sm'
-                                                    )}
-                                                    onClick={handleSignup}
-                                                >
-                                                    Register
-                                                </button>
-                                            )}
-                                        </Menu.Item>
-                                    </div>
-                                </Menu.Items>
-                            </Transition>
-                        </Menu>
+                                <Transition
+                                    as={Fragment}
+                                    enter="transition ease-out duration-100"
+                                    enterFrom="transform opacity-0 scale-95"
+                                    enterTo="transform opacity-100 scale-100"
+                                    leave="transition ease-in duration-75"
+                                    leaveFrom="transform opacity-100 scale-100"
+                                    leaveTo="transform opacity-0 scale-95"
+                                >
+                                    <Menu.Items className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-[#222225] ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
+                                        <div className="py-1">
+                                            <Menu.Item>
+                                                {({ active }) => (
+                                                    <button
+                                                        className={classNames(
+                                                            active ? 'bg-[#2c2c2f] text-[#cccccc]' : 'text-[#cccccc]',
+                                                            'block px-4 py-2 text-sm'
+                                                        )}
+                                                        onClick={handleLogin}
+                                                    >
+                                                        Login
+                                                    </button>
+                                                )}
+                                            </Menu.Item>
+                                            <Menu.Item>
+                                                {({ active }) => (
+                                                    <button
+                                                        className={classNames(
+                                                            active ? 'bg-[#2c2c2f] text-[#cccccc]' : 'text-[#cccccc]',
+                                                            'block px-4 py-2 text-sm'
+                                                        )}
+                                                        onClick={handleSignup}
+                                                    >
+                                                        Register
+                                                    </button>
+                                                )}
+                                            </Menu.Item>
+                                        </div>
+                                    </Menu.Items>
+                                </Transition>
+                            </Menu>
                         </div>
                     </>
                 )}
@@ -262,6 +262,10 @@ function MobileNavbar() {
                         <Link to="/event" className="h-[40px] flex items-center text-[15px] pl-6  lg:mt-3 mt-7 btn" onClick={closeSidebar}>
                             <BsFillCalendarEventFill className="text-[20px]" />
                             <span className="ml-7">Events</span>
+                        </Link>
+                        <Link to="/loyality" className="h-[40px] flex items-center text-[15px] pl-6  lg:mt-3 mt-7 btn sidebarOption" onClick={closeSidebar}>
+                            <MdLoyalty className="text-[20px]" />
+                            <span className="ml-7">Loyalty Split</span>
                         </Link>
                         <div className="h-[1px] bg-[gray] w-[87%] my-5 ml-3"></div>
                         <div className="px-6 text-[12px] text-[#B0B0B0]">

@@ -1,19 +1,17 @@
 import React, { useState } from "react";
 import "./Landing.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight,faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import feature1 from "../../assets/landing-page/feature1.svg";
 import feature2 from "../../assets/landing-page/feature2.svg";
 import Trending from "../../Components/Trending-Artists/Trending";
-import LandFooter from "../../Layout/Landing-Footer/Landing-Footer";
 import App from '../../App'
-import { AiOutlineSearch, AiOutlineClose, AiOutlineStar } from 'react-icons/ai'
-import { CgProfile } from 'react-icons/cg'
-import { FaBars, FaStoreAlt } from 'react-icons/fa'
+import "../../Layout/Landing-Footer/Landing-Footer.css";
 import LoginImg from '../../assets/login.svg'
 import Logo from '../../assets/logo.jpeg'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 function Landing() {
+  const navigate=useNavigate()
   const [route, setRoute] = useState(false)
   const handleRoutes = () => {
     setRoute(true)
@@ -34,6 +32,27 @@ function Landing() {
     setSignPage(true)
     setLoginPage(false)
   }
+  const handleBlogPage=()=>{
+    setRoute(true)
+    navigate('/blog')
+  }
+  const handleAboutPage=()=>{
+    setRoute(true)
+    navigate('/aboutUs')
+  }
+  const handleTermPage=()=>{
+    setRoute(true)
+    navigate('/terms')
+  }
+  const handleContactPage=()=>{
+    setRoute(true)
+    navigate('/contact')
+  }
+  const handlePolicyPage=()=>{
+    setRoute(true)
+    navigate('/policy')
+  }
+
   return (
     <>
       {route == false && (
@@ -248,7 +267,33 @@ function Landing() {
               </div>
             </div>
           </div>
-          <LandFooter />
+          <footer className="footer flex">
+      <h2>Copyright © 2022 Lorem.</h2>
+      <div className="center-footer flex">
+        <button className="foot-link" onClick={handleBlogPage}>
+          Blogs
+        </button>
+        <button className="foot-link" onClick={handleAboutPage}>
+          About Us
+        </button>
+        <button className="foot-link" onClick={handleTermPage}>
+          Terms
+        </button>
+        <button className="foot-link" onClick={handleContactPage}>
+          Contact
+        </button>
+        <button className="foot-link" onClick={handlePolicyPage}>
+          Privacy Policy
+        </button>
+      </div>
+      <div className="language-selector">
+        <div className="selected-language ">
+          <p className="flex">
+            English <FontAwesomeIcon icon={faChevronUp} />
+          </p>
+        </div>
+      </div>
+    </footer>
         </div>
       )}
       {route == true && (
