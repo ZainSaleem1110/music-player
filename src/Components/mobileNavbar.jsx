@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, Fragment  } from 'react'
 import { AiOutlineSearch, AiOutlineClose, AiOutlineStar } from 'react-icons/ai'
 import { CgProfile } from 'react-icons/cg'
 import { FaBars, FaStoreAlt } from 'react-icons/fa'
@@ -10,6 +10,11 @@ import { MdLibraryMusic, MdPlaylistPlay, MdReplay10, MdOutlineSearch } from 'rea
 import { RiDropFill, RiExchangeDollarLine, RiPlayListFill } from 'react-icons/ri'
 import { FiBarChart, FiBox } from 'react-icons/fi'
 import { IoMdAppstore } from 'react-icons/io'
+import { Menu, Transition } from '@headlessui/react'
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
 
 function MobileNavbar() {
     const [loginPage, setLoginPage] = useState(false)
@@ -27,10 +32,6 @@ function MobileNavbar() {
     const handleSignup = () => {
         setSignPage(true)
         setLoginPage(false)
-    }
-    const handleDropdown = () => {
-        var Dropdown = document.querySelector('.profileDropdown')
-        Dropdown.classList.toggle("profileDrop");
     }
 
     const handleSearchbar = () => {
@@ -63,17 +64,56 @@ function MobileNavbar() {
                             <FaBars className="text-white text-[20px] mr-5" onClick={sidebar} />
                             <img src={Logo} className="w-[50px]" alt="" />
                         </div>
-                        <div className="flex gap-x-3 text-[white] text-[24px]">
-                            <MdOutlineSearch onClick={handleSearchbar} />
-                            <CgProfile onClick={handleDropdown} />
-                            <div className="absolute rounded-lg top-12 right-6 border-b border-[#ffffff4d] z-50 text-[16px] w-[170px] bg-[#222225] profileDropdown profileDrop">
-                                <button className="h-[35px] w-[100%] rounded-md flex items-center px-3 text-[white]" onClick={handleLogin}>
-                                    Login
-                                </button>
-                                <button className="h-[35px] w-[100%] px-3 rounded-md flex items-center">
-                                    Register
-                                </button>
+                        <div className="flex items-center">
+                            <MdOutlineSearch className="text-white text-[20px]" onClick={handleSearchbar}/>
+                        <Menu as="div" className="relative inline-block text-left">
+                            <div>
+                                <Menu.Button className="inline-flex justify-center w-full rounded-md px-4 py-2 text-sm font-medium focus:outline-none text-white">
+                                    <CgProfile className="-mr-1 ml-2 h-6 w-6" aria-hidden="true" />
+                                </Menu.Button>
                             </div>
+
+                            <Transition
+                                as={Fragment}
+                                enter="transition ease-out duration-100"
+                                enterFrom="transform opacity-0 scale-95"
+                                enterTo="transform opacity-100 scale-100"
+                                leave="transition ease-in duration-75"
+                                leaveFrom="transform opacity-100 scale-100"
+                                leaveTo="transform opacity-0 scale-95"
+                            >
+                                <Menu.Items className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-[#222225] ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
+                                    <div className="py-1">
+                                        <Menu.Item>
+                                            {({ active }) => (
+                                                <button
+                                                    className={classNames(
+                                                        active ? 'bg-[#2c2c2f] text-[#cccccc]' : 'text-[#cccccc]',
+                                                        'block px-4 py-2 text-sm'
+                                                    )}
+                                                    onClick={handleLogin}
+                                                >
+                                                    Login
+                                                </button>
+                                            )}
+                                        </Menu.Item>
+                                        <Menu.Item>
+                                            {({ active }) => (
+                                                <button
+                                                    className={classNames(
+                                                        active ? 'bg-[#2c2c2f] text-[#cccccc]' : 'text-[#cccccc]',
+                                                        'block px-4 py-2 text-sm'
+                                                    )}
+                                                    onClick={handleSignup}
+                                                >
+                                                    Register
+                                                </button>
+                                            )}
+                                        </Menu.Item>
+                                    </div>
+                                </Menu.Items>
+                            </Transition>
+                        </Menu>
                         </div>
                     </>
                 )}
@@ -87,16 +127,16 @@ function MobileNavbar() {
             </div>
 
             {loginPage == true && (
-                <div className="absolute top-0 left-0 w-[100%] h-[100vh] text-[white] flex justify-center items-center z-50 " style={{ background: "rgba(255,255,255,.3)" }}>
-                    <div className="w-[50%] h-[520px] rounded-lg flex">
-                        <div className="w-[40%] h-[100%] bg-[#f98f1d] rounded-l-lg flex flex-col justify-between py-10 pl-7">
+                <div className="absolute top-0 left-0 w-[100%] h-[100vh] text-[white] flex justify-center items-center z-50 pt-10" style={{ background: "rgba(255,255,255,.3)" }}>
+                    <div className="lg:w-[50%] md:w-[70%] w-[95%] h-[520px] rounded-lg flex">
+                        <div className="w-[40%] h-[100%] bg-[#f98f1d] rounded-l-lg flex-col justify-between py-10 pl-7 sm:flex hidden">
                             <div>
                                 <h1 className="text-[32px] font-bold">Login</h1>
                                 <p className="mt-2 w-[70%]">Get access to your music, playlists and account</p>
                             </div>
                             <img src={LoginImg} className="w-[100%]" alt="" />
                         </div>
-                        <div className="w-[60%] h-[100%] bg-white rounded-r-lg px-8">
+                        <div className="sm:w-[60%] w-[100%] h-[100%] bg-white rounded-r-lg sm:rounded-l-lg rounded-l-lg px-8">
                             <div className="flex justify-end mt-5 cursor-pointer" onClick={handleCloseLoginPage}>
                                 <div className="w-[25px] h-[25px] flex justify-center items-center rounded-full bg-[black] text-white">
                                     x
@@ -116,16 +156,16 @@ function MobileNavbar() {
                 </div>
             )}
             {signPage == true && (
-                <div className="absolute top-0 left-0 w-[100%] h-[100vh] text-[white] flex justify-center items-center z-40" style={{ background: "rgba(255,255,255,.3)" }} >
-                    <div className="w-[55%] rounded-lg flex z-50">
-                        <div className="w-[40%] h-auto bg-[#f98f1d] rounded-l-lg flex flex-col justify-between py-10 pl-7">
+                <div className="absolute top-0 left-0 w-[100%] h-[80vh] text-[white] flex justify-center items-center z-40 pt-10" style={{ background: "rgba(255,255,255,.3)" }} >
+                    <div className="md:w-[70%] w-[95%] rounded-lg flex sm:flex-row flex-col z-50">
+                        <div className="sm:w-[40%] h-auto bg-[#f98f1d] rounded-l-lg sm:flex flex-col hidden justify-between py-10 pl-7">
                             <div>
                                 <h1 className="text-[32px] font-bold">Signup</h1>
                                 <p className="mt-2 w-[70%]">Get access to your music, playlists and account</p>
                             </div>
                             <img src={LoginImg} className="w-[100%]" alt="" />
                         </div>
-                        <div className="w-[60%] h-[100%] bg-white rounded-r-lg px-8">
+                        <div className="sm:w-[60%] w-[100%] h-[100%] bg-white rounded-r-lg sm:rounded-l-none rounded-l-lg px-8">
                             <div className="flex justify-end mt-5 cursor-pointer" onClick={handleCloseLoginPage}>
                                 <div className="w-[25px] h-[25px] flex justify-center items-center rounded-full bg-[black] text-white">
                                     x

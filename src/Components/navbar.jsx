@@ -49,23 +49,23 @@ function Navbar() {
                         <button className="h-[35px] w-[100%] rounded-md flex items-center px-3 text-[white]" onClick={handleLogin}>
                             Login
                         </button>
-                        <button className="h-[35px] w-[100%] px-3 rounded-md flex items-center">
+                        <button className="h-[35px] w-[100%] px-3 rounded-md flex items-center" onClick={handleSignup}>
                             Register
                         </button>
                     </div>
                 </div>
             </div>
             {loginPage == true && (
-            <div className="absolute top-0 left-0 w-[100%] h-[100vh] text-[white] flex justify-center items-center z-50 " style={{ background: "rgba(255,255,255,.3)" }}>
-              <div className="w-[50%] h-[520px] rounded-lg flex">
-                <div className="w-[40%] h-[100%] bg-[#f98f1d] rounded-l-lg flex flex-col justify-between py-10 pl-7">
+            <div className="absolute top-0 left-0 w-[100%] h-[100vh] text-[white] flex justify-center items-center z-50" style={{ background: "rgba(255,255,255,.3)" }}>
+              <div className="lg:w-[50%] md:w-[70%] w-[95%] h-[520px] rounded-lg flex">
+                <div className="w-[40%] h-[100%] bg-[#f98f1d] rounded-l-lg flex-col justify-between py-10 pl-7 sm:flex hidden">
                   <div>
                     <h1 className="text-[32px] font-bold">Login</h1>
                     <p className="mt-2 w-[70%]">Get access to your music, playlists and account</p>
                   </div>
                   <img src={LoginImg} className="w-[100%]" alt="" />
                 </div>
-                <div className="w-[60%] h-[100%] bg-white rounded-r-lg px-8">
+                <div className="sm:w-[60%] w-[100%] h-[100%] bg-white rounded-r-lg sm:rounded-l-none rounded-l-lg px-8">
                 <div className="flex justify-end mt-5 cursor-pointer" onClick={handleCloseLoginPage}>
                   <div className="w-[25px] h-[25px] flex justify-center items-center rounded-full bg-[black] text-white">
                     x
@@ -84,17 +84,17 @@ function Navbar() {
             </div>
             </div>
           )}
-            {signPage == true && (
+          {signPage == true && (
             <div className="absolute top-0 left-0 w-[100%] h-[100vh] text-[white] flex justify-center items-center z-40" style={{ background: "rgba(255,255,255,.3)" }} >
-              <div className="w-[55%] rounded-lg flex z-50">
-                <div className="w-[40%] h-auto bg-[#f98f1d] rounded-l-lg flex flex-col justify-between py-10 pl-7">
+              <div className="md:w-[70%] w-[95%] rounded-lg flex sm:flex-row flex-col z-50">
+                <div className="sm:w-[40%] h-auto bg-[#f98f1d] rounded-l-lg sm:flex flex-col hidden justify-between py-10 pl-7">
                   <div>
                     <h1 className="text-[32px] font-bold">Signup</h1>
                     <p className="mt-2 w-[70%]">Get access to your music, playlists and account</p>
                   </div>
                   <img src={LoginImg} className="w-[100%]" alt="" />
                 </div>
-                <div className="w-[60%] h-[100%] bg-white rounded-r-lg px-8">
+                <div className="sm:w-[60%] w-[100%] h-[100%] bg-white rounded-r-lg sm:rounded-l-none rounded-l-lg px-8">
                   <div className="flex justify-end mt-5 cursor-pointer" onClick={handleCloseLoginPage}>
                   <div className="w-[25px] h-[25px] flex justify-center items-center rounded-full bg-[black] text-white">
                     x
