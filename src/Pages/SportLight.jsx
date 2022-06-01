@@ -1,14 +1,19 @@
-import React,{ Fragment } from 'react'
+import React, { Fragment } from 'react'
 import { BsPlug, BsThreeDots, BsClock } from 'react-icons/bs'
 import { FaPlay } from 'react-icons/fa'
 import Song01 from '../assets/songs1.jpeg'
 import { Menu, Transition } from '@headlessui/react'
+import { useNavigate } from 'react-router-dom'
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+    return classes.filter(Boolean).join(' ')
 }
 
 function SportLight() {
+    const navigate = useNavigate()
+const handleDetailPage = () => {
+    navigate('/songPlay')
+}
     return (
         <div className="text-[white]">
             <div className="h-[200px] w-[100%] bg-[lightslategray] rounded-xl albumbg overflow-hidden relative flex justify-center items-center">
@@ -74,7 +79,7 @@ function SportLight() {
                     </div>
                 </div>
                 <div className="ml-14 mt-4 sportlight_parent">
-                    <div className="py-3 md:w-[64%] w-[100%] flex justify-between items-center px-3 text-white hover:bg-[#ffffff0d] bg-[#222225] cursor-pointer rounded-lg">
+                    <div className="py-3 md:w-[64%] w-[100%] flex justify-between items-center px-3 text-white hover:bg-[#ffffff0d] bg-[#222225] cursor-pointer rounded-lg" onClick={handleDetailPage}>
                         <div className="flex items-center">
                             <div className="relative w-[70px] h-[70px]">
                                 <img src={Song01} className="w-[70px] h-[70px] rounded-sm" alt="" />

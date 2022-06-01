@@ -7,6 +7,7 @@ import { BsMusicNoteBeamed, BsPlayCircle, BsPlayFill, BsFillHeartFill, BsFillSha
 import { IoMdHeartDislike } from 'react-icons/io'
 import { FaCommentAlt, FaFolderPlus } from 'react-icons/fa'
 import { Menu, Transition } from '@headlessui/react'
+import ShareModal from './ShareModal'
 
 const Card = [
     { Img: Song01, Name: "Mira hacia mí", detail: "Newyauk" },
@@ -99,10 +100,7 @@ function SongPlayPage() {
             </div>
             <div className="flex items-center justify-between py-4 border-b border-[#ffffff4d]">
                 <div className="flex items-center">
-                    <button className="w-[100px] h-[40px] rounded-md bg-[#ffffff] text-[black] flex items-center justify-center">
-                        <BsFillShareFill />
-                        <span className="ml-2 font-bold">Share</span>
-                    </button>
+                    <ShareModal/>
                         <Menu as="div" className="relative inline-block text-left">
                             <div>
                                 <Menu.Button className="w-[100px] h-[40px] rounded-md bg-[#ffffff] text-[black] font-bold flex items-center justify-center ml-4">
