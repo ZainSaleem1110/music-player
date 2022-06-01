@@ -212,7 +212,7 @@ function MobileNavbar() {
                         </Link>
                         <Link to="/sportLight" className="h-[40px] flex items-center text-[15px] pl-6 btn" onClick={closeSidebar}>
                             <RiDropFill className="text-[20px]" />
-                            <span className="ml-7">Sportlight</span>
+                            <span className="ml-7">Spotlight</span>
                         </Link>
                         <Link to="/genres" className="h-[40px] flex items-center text-[15px] pl-6 btn" onClick={closeSidebar}>
                             <FiBox className="text-[20px]" />

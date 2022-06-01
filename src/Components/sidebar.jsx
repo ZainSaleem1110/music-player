@@ -48,7 +48,7 @@ function Sidebar() {
                     </Link>
                     <Link to="/sportLight" className="h-[40px] flex items-center text-[15px] pl-6 btn sidebarOption" onClick={SelectOption}>
                         <RiDropFill className="text-[20px]" />
-                        <span className="ml-7">Sportlight</span>
+                        <span className="ml-7">Spotlight</span>
                     </Link>
                     <Link to="/genres" className="h-[40px] flex items-center text-[15px] pl-6 btn sidebarOption" onClick={SelectOption}>
                         <FiBox className="text-[20px]" />
