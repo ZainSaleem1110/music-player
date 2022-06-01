@@ -149,7 +149,7 @@ function MobileNavbar() {
                             <div className="py-10">
                                 <input type="text" className="h-[40px] border w-[100%] rounded-md bg-[#f3f3f3] focus:outline-none pl-5 font-medium text-[#767e86]" placeholder="Username" />
                                 <input type="text" className="h-[40px] border w-[100%] rounded-md bg-[#f3f3f3] focus:outline-none pl-5 mt-4 font-medium text-[#767e86]" placeholder="Password" />
-                                <Link to="forgotPass" className="text-[#f98f1d] font-medium mt-1 flex justify-end text-[14px]" onClick={handleForgotPage}>Forgot your password?</Link>
+                                <Link to="forgotPass" className="text-[#f98f1d] font-medium mt-1 flex justify-end text-[14px] text-end w-full" onClick={handleForgotPage}>Forgot your password?</Link>
                                 <button className="h-[40px] w-[100%] bg-[#f98f1d] flex items-center justify-center font-medium rounded-md mt-10">
                                     Login
                                 </button>
