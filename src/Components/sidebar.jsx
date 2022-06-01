@@ -30,7 +30,7 @@ function Sidebar() {
                 </div>
                 <div className="text-white lg:my-24 my-4 font-bold sidebarParent">
                     <h1 className="text-[12px] pl-6 text-[lightgray] lg:flex hidden">BROWSER MUSIC</h1>
-                    <Link to="/" className="h-[40px] flex items-center text-[15px] pl-6  mt-3 btn active sidebarOption" onClick={SelectOption}>
+                    <Link to="/discover" className="h-[40px] flex items-center text-[15px] pl-6  mt-3 btn active sidebarOption" onClick={SelectOption}>
                         <BsMusicNoteBeamed className="text-[20px]" />
                         <span className="ml-7">Discover</span>
                     </Link>

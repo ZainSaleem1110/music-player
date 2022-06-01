@@ -41,7 +41,7 @@ function Routeing() {
             </div>
             <div className="px-4 py-10">
                 <Routes>
-                    <Route path="/" element={<Discover />} />
+                    <Route path="/discover" element={<Discover />} />
                     <Route path="/newMusic" element={<NewMusic />} />
                     <Route path="/topMusic" element={<TopMusic />} />
                     <Route path="/albums" element={<Album />} />
