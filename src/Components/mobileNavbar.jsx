@@ -263,7 +263,7 @@ function MobileNavbar() {
                         </Link>
                         <Link to="/favourite" className="h-[40px] flex items-center text-[15px] pl-6 btn" onClick={closeSidebar}>
                             <AiOutlineStar className="text-[20px]" />
-                            <span className="ml-7">Favourite</span>
+                            <span className="ml-7">Favorite</span>
                         </Link>
                         <h1 className="text-[12px] pl-6 mt-7 text-[lightgray]">
                             Events

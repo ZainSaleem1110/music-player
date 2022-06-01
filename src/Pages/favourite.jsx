@@ -8,9 +8,9 @@ function favourite() {
                 <div className="w-[32px] h-[32px] bg-[#e4ab00] flex justify-center items-center rounded-full">
                     <AiOutlineStar className="text-[16px]" />
                 </div>
-                <h1 className="text-[22px] ml-3">My Favourites</h1>
+                <h1 className="text-[22px] ml-3">My Favorites</h1>
             </div>
-            <p className="mt-3">You currently have 0 favourite songs</p>
+            <p className="mt-3">You currently have 0 favorite songs</p>
         </div>
     )
 }
