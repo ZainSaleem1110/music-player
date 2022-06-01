@@ -28,7 +28,7 @@ import OtherDetailPage from './Components/OtherDetail'
 import PlaylistDetail from './Components/PlaylistDetail'
 import MobileNavbar from './Components/mobileNavbar'
 import MyPlaylistDetail from './Components/myPlaylistDetail'
-import Loyality from './Components/Loyality'
+import Loyality from './Components/Royalty'
 
 function Routeing() {
     return (

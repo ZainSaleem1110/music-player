@@ -101,7 +101,7 @@ function Sidebar() {
                     </Link>
                     <Link to="/loyality" className="h-[40px] flex items-center text-[15px] pl-6  lg:mt-3 mt-7 btn sidebarOption" onClick={SelectOption}>
                         <MdLoyalty className="text-[20px]" />
-                        <span className="ml-7">Loyalty Split</span>
+                        <span className="ml-7">Royalty Splits</span>
                     </Link>
                     <div className="h-[1px] bg-[gray] w-[87%] my-5 ml-3 lg:flex hidden"></div>
                     <div className="lg:flex hidden">
