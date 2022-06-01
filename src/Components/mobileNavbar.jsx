@@ -156,7 +156,7 @@ function MobileNavbar() {
                 </div>
             )}
             {signPage == true && (
-                <div className="absolute top-0 left-0 w-[100%] h-[80vh] text-[white] flex justify-center items-center z-40 pt-10" style={{ background: "rgba(255,255,255,.3)" }} >
+                <div className="absolute top-0 left-0 w-[100%] h-[100vh] text-[white] flex justify-center items-center z-40" style={{ background: "rgba(255,255,255,.3)" }} >
                     <div className="md:w-[70%] w-[95%] rounded-lg flex sm:flex-row flex-col z-50">
                         <div className="sm:w-[40%] h-auto bg-[#f98f1d] rounded-l-lg sm:flex flex-col hidden justify-between py-10 pl-7">
                             <div>
