@@ -5,6 +5,7 @@ import LoginImg from '../assets/login.svg'
 import Logo from '../assets/logo.jpeg'
 import { CgProfile } from 'react-icons/cg'
 import { Menu, Transition } from '@headlessui/react'
+import ForgotPass from '../Pages/ForgotPass'
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -13,6 +14,7 @@ function classNames(...classes) {
 function Navbar() {
   const [loginPage, setLoginPage] = useState(false)
   const [signPage, setSignPage] = useState(false)
+  const [forgot, setForgot] = useState(false)
 
   const handleLogin = () => {
     setLoginPage(true)
@@ -25,6 +27,10 @@ function Navbar() {
   const handleSignup = () => {
     setSignPage(true)
     setLoginPage(false)
+  }
+  const handleForgotPage = () => {
+    setLoginPage(false)
+    setForgot(true)
   }
 
   return (
@@ -111,7 +117,7 @@ function Navbar() {
               <div className="py-10">
                 <input type="text" className="h-[40px] border w-[100%] rounded-md bg-[#f3f3f3] focus:outline-none pl-5 font-medium text-[#767e86]" placeholder="Username" />
                 <input type="text" className="h-[40px] border w-[100%] rounded-md bg-[#f3f3f3] focus:outline-none pl-5 mt-4 font-medium text-[#767e86]" placeholder="Password" />
-                <Link to="forgotPass" className="text-[#f98f1d] font-medium mt-1 flex justify-end text-[14px]">Forgot your password?</Link>
+                <button className="text-[#f98f1d] font-medium mt-1 flex justify-end text-[14px]" onClick={handleForgotPage}>Forgot your password?</button>
                 <button className="h-[40px] w-[100%] bg-[#f98f1d] flex items-center justify-center font-medium rounded-md mt-10">
                   Login
                 </button>
@@ -153,6 +159,11 @@ function Navbar() {
           </div>
         </div>
       )}
+      {forgot == true && (
+            <div className="absolute top-0 left-0 w-[100%] h-[100vh] text-[white] z-40 bg-[#171719] overflow-x-auto">
+                <ForgotPass/>
+            </div>
+          )}
     </>
   )
 }

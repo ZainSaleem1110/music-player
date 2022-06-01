@@ -11,6 +11,7 @@ import { RiDropFill, RiExchangeDollarLine, RiPlayListFill } from 'react-icons/ri
 import { FiBarChart, FiBox } from 'react-icons/fi'
 import { IoMdAppstore } from 'react-icons/io'
 import { Menu, Transition } from '@headlessui/react'
+import ForgotPass from '../Pages/ForgotPass'
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -20,6 +21,7 @@ function MobileNavbar() {
     const [loginPage, setLoginPage] = useState(false)
     const [signPage, setSignPage] = useState(false)
     const [searchbar, setSearchbar] = useState(0)
+    const [forgot, setForgot] = useState(false)
 
     const handleLogin = () => {
         setLoginPage(true)
@@ -53,7 +55,10 @@ function MobileNavbar() {
         sidebar.width = "0%"
         sidebar.transition = ".5s"
     }
-
+    const handleForgotPage = () => {
+        setLoginPage(false)
+        setForgot(true)
+      }
 
     return (
         <>
@@ -144,7 +149,7 @@ function MobileNavbar() {
                             <div className="py-10">
                                 <input type="text" className="h-[40px] border w-[100%] rounded-md bg-[#f3f3f3] focus:outline-none pl-5 font-medium text-[#767e86]" placeholder="Username" />
                                 <input type="text" className="h-[40px] border w-[100%] rounded-md bg-[#f3f3f3] focus:outline-none pl-5 mt-4 font-medium text-[#767e86]" placeholder="Password" />
-                                <Link to="forgotPass" className="text-[#f98f1d] font-medium mt-1 flex justify-end text-[14px]">Forgot your password?</Link>
+                                <Link to="forgotPass" className="text-[#f98f1d] font-medium mt-1 flex justify-end text-[14px]" onClick={handleForgotPage}>Forgot your password?</Link>
                                 <button className="h-[40px] w-[100%] bg-[#f98f1d] flex items-center justify-center font-medium rounded-md mt-10">
                                     Login
                                 </button>
@@ -186,6 +191,11 @@ function MobileNavbar() {
                     </div>
                 </div>
             )}
+            {forgot == true && (
+            <div className="absolute top-0 left-0 w-[100%] h-[100vh] text-[white] z-40 bg-[#171719] overflow-x-auto">
+                <ForgotPass/>
+            </div>
+          )}
             <div className='h-[100vh] sidebar z-50 overflow-y-auto category absolute top-0 left-0' style={{ background: 'rgba(0,0,0,40%)' }}>
                 <div className="h-[100vh] bg-[#222225] sm:w-[40%] w-[70%] overflow-y-auto overflow-x-hidden">
                     <div className="py-2 flex justify-center w-[100%] bg-[#222225]">

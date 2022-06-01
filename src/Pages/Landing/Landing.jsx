@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Landing.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight,faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import feature1 from "../../assets/landing-page/feature1.svg";
 import feature2 from "../../assets/landing-page/feature2.svg";
 import Trending from "../../Components/Trending-Artists/Trending";
@@ -10,8 +10,9 @@ import "../../Layout/Landing-Footer/Landing-Footer.css";
 import LoginImg from '../../assets/login.svg'
 import Logo from '../../assets/logo.jpeg'
 import { Link, useNavigate } from 'react-router-dom'
+import ForgotPass from "../ForgotPass";
 function Landing() {
-  const navigate=useNavigate()
+  const navigate = useNavigate()
   const [route, setRoute] = useState(false)
   const handleRoutes = () => {
     setRoute(true)
@@ -20,6 +21,7 @@ function Landing() {
 
   const [loginPage, setLoginPage] = useState(false)
   const [signPage, setSignPage] = useState(false)
+  const [forgot, setForgot] = useState(false)
 
   const handleLogin = () => {
     setLoginPage(true)
@@ -33,25 +35,30 @@ function Landing() {
     setSignPage(true)
     setLoginPage(false)
   }
-  const handleBlogPage=()=>{
+  const handleBlogPage = () => {
     setRoute(true)
     navigate('/blog')
   }
-  const handleAboutPage=()=>{
+  const handleAboutPage = () => {
     setRoute(true)
     navigate('/aboutUs')
   }
-  const handleTermPage=()=>{
+  const handleTermPage = () => {
     setRoute(true)
     navigate('/terms')
   }
-  const handleContactPage=()=>{
+  const handleContactPage = () => {
     setRoute(true)
     navigate('/contact')
   }
-  const handlePolicyPage=()=>{
+  const handlePolicyPage = () => {
     setRoute(true)
     navigate('/policy')
+  }
+
+  const handleForgotPage = () => {
+    setLoginPage(false)
+    setForgot(true)
   }
 
   return (
@@ -83,22 +90,22 @@ function Landing() {
                   <img src={LoginImg} className="w-[100%]" alt="" />
                 </div>
                 <div className="sm:w-[60%] w-[100%] h-[100%] bg-white rounded-r-lg sm:rounded-l-none rounded-l-lg px-8">
-                <div className="flex justify-end mt-5 cursor-pointer" onClick={handleCloseLoginPage}>
-                  <div className="w-[25px] h-[25px] flex justify-center items-center rounded-full bg-[black] text-white">
-                    x
-                  </div>
+                  <div className="flex justify-end mt-5 cursor-pointer" onClick={handleCloseLoginPage}>
+                    <div className="w-[25px] h-[25px] flex justify-center items-center rounded-full bg-[black] text-white">
+                      x
+                    </div>
                   </div>
                   <div className="py-10">
-                  <input type="text" className="h-[40px] border w-[100%] rounded-md bg-[#f3f3f3] focus:outline-none pl-5 font-medium text-[#767e86]" placeholder="Username" />
-                  <input type="text" className="h-[40px] border w-[100%] rounded-md bg-[#f3f3f3] focus:outline-none pl-5 mt-4 font-medium text-[#767e86]" placeholder="Password" />
-                  <Link to="forgotPass" className="text-[#f98f1d] font-medium mt-1 flex justify-end text-[14px]">Forgot your password?</Link>
-                  <button className="h-[40px] w-[100%] bg-[#f98f1d] flex items-center justify-center font-medium rounded-md mt-10">
-                    Login
-                  </button>
-                  <p className="text-[#767e86] font-medium mt-8 text-center">Don't have an account? <span><button className="text-[#f98f1d] font-bold" onClick={handleSignup}>Sign Up</button></span></p>
+                    <input type="text" className="h-[40px] border w-[100%] rounded-md bg-[#f3f3f3] focus:outline-none pl-5 font-medium text-[#767e86]" placeholder="Username" />
+                    <input type="text" className="h-[40px] border w-[100%] rounded-md bg-[#f3f3f3] focus:outline-none pl-5 mt-4 font-medium text-[#767e86]" placeholder="Password" />
+                    <button className="text-[#f98f1d] font-medium mt-1 flex justify-end text-[14px]" onClick={handleForgotPage}>Forgot your password?</button>
+                    <button className="h-[40px] w-[100%] bg-[#f98f1d] flex items-center justify-center font-medium rounded-md mt-10">
+                      Login
+                    </button>
+                    <p className="text-[#767e86] font-medium mt-8 text-center">Don't have an account? <span><button className="text-[#f98f1d] font-bold" onClick={handleSignup}>Sign Up</button></span></p>
+                  </div>
                 </div>
               </div>
-            </div>
             </div>
           )}
           {signPage == true && (
@@ -113,24 +120,29 @@ function Landing() {
                 </div>
                 <div className="sm:w-[60%] w-[100%] h-[100%] bg-white rounded-r-lg sm:rounded-l-none rounded-l-lg px-8">
                   <div className="flex justify-end mt-5 cursor-pointer" onClick={handleCloseLoginPage}>
-                  <div className="w-[25px] h-[25px] flex justify-center items-center rounded-full bg-[black] text-white">
-                    x
-                  </div>
+                    <div className="w-[25px] h-[25px] flex justify-center items-center rounded-full bg-[black] text-white">
+                      x
+                    </div>
                   </div>
                   <div className="py-10">
-                  <input type="text" className="h-[40px] border w-[100%] rounded-md bg-[#f3f3f3] focus:outline-none pl-5 font-medium text-[#767e86]" placeholder="Full Name" />
-                  <input type="text" className="h-[40px] border w-[100%] rounded-md bg-[#f3f3f3] focus:outline-none pl-5 mt-4 font-medium text-[#767e86]" placeholder="Username" />
-                  <input type="email" className="h-[40px] border w-[100%] rounded-md bg-[#f3f3f3] focus:outline-none pl-5 mt-4 font-medium text-[#767e86]" placeholder="Email address" />
-                  <input type="password" className="h-[40px] border w-[100%] rounded-md bg-[#f3f3f3] focus:outline-none pl-5 mt-4 font-medium text-[#767e86]" placeholder="Password" />
-                  <input type="password" className="h-[40px] border w-[100%] rounded-md bg-[#f3f3f3] focus:outline-none pl-5 mt-4 font-medium text-[#767e86]" placeholder="Confirm Password" />
-                  <button className="h-[40px] w-[100%] bg-[#f98f1d] flex items-center justify-center font-medium rounded-md mt-4">
-                    Login
-                  </button>
-                  <p className="text-[#767e86] font-medium mt-8 text-center">Already have an account? <span><button className="text-[#f98f1d] font-bold" onClick={handleLogin}>Login</button></span></p>
-                  <p className="text-[#767e86] text-[14px] mt-14 text-center">By signing up, you agree to our <Link to="/terms" className="text-[#f98f1d] font-bold">Terms</Link> and <Link to="/privacy" className="text-[#f98f1d] font-bold">Privacy Policy</Link></p>
+                    <input type="text" className="h-[40px] border w-[100%] rounded-md bg-[#f3f3f3] focus:outline-none pl-5 font-medium text-[#767e86]" placeholder="Full Name" />
+                    <input type="text" className="h-[40px] border w-[100%] rounded-md bg-[#f3f3f3] focus:outline-none pl-5 mt-4 font-medium text-[#767e86]" placeholder="Username" />
+                    <input type="email" className="h-[40px] border w-[100%] rounded-md bg-[#f3f3f3] focus:outline-none pl-5 mt-4 font-medium text-[#767e86]" placeholder="Email address" />
+                    <input type="password" className="h-[40px] border w-[100%] rounded-md bg-[#f3f3f3] focus:outline-none pl-5 mt-4 font-medium text-[#767e86]" placeholder="Password" />
+                    <input type="password" className="h-[40px] border w-[100%] rounded-md bg-[#f3f3f3] focus:outline-none pl-5 mt-4 font-medium text-[#767e86]" placeholder="Confirm Password" />
+                    <button className="h-[40px] w-[100%] bg-[#f98f1d] flex items-center justify-center font-medium rounded-md mt-4">
+                      Login
+                    </button>
+                    <p className="text-[#767e86] font-medium mt-8 text-center">Already have an account? <span><button className="text-[#f98f1d] font-bold" onClick={handleLogin}>Login</button></span></p>
+                    <p className="text-[#767e86] text-[14px] mt-14 text-center">By signing up, you agree to our <Link to="/terms" className="text-[#f98f1d] font-bold">Terms</Link> and <Link to="/privacy" className="text-[#f98f1d] font-bold">Privacy Policy</Link></p>
+                  </div>
                 </div>
               </div>
-              </div>
+            </div>
+          )}
+          {forgot == true && (
+            <div className="absolute top-0 left-0 w-[100%] h-[100vh] text-[white] z-40 bg-[#171719] overflow-x-auto">
+                <ForgotPass/>
             </div>
           )}
           <div className="landing__hero">
@@ -269,32 +281,32 @@ function Landing() {
             </div>
           </div>
           <footer className="footer flex">
-      <h2>Copyright © 2022 Lorem.</h2>
-      <div className="center-footer flex">
-        <button className="foot-link" onClick={handleBlogPage}>
-          Blogs
-        </button>
-        <button className="foot-link" onClick={handleAboutPage}>
-          About Us
-        </button>
-        <button className="foot-link" onClick={handleTermPage}>
-          Terms
-        </button>
-        <button className="foot-link" onClick={handleContactPage}>
-          Contact
-        </button>
-        <button className="foot-link" onClick={handlePolicyPage}>
-          Privacy Policy
-        </button>
-      </div>
-      <div className="language-selector">
-        <div className="selected-language ">
-          <p className="flex">
-            English <FontAwesomeIcon icon={faChevronUp} />
-          </p>
-        </div>
-      </div>
-    </footer>
+            <h2>Copyright © 2022 Lorem.</h2>
+            <div className="center-footer flex">
+              <button className="foot-link" onClick={handleBlogPage}>
+                Blogs
+              </button>
+              <button className="foot-link" onClick={handleAboutPage}>
+                About Us
+              </button>
+              <button className="foot-link" onClick={handleTermPage}>
+                Terms
+              </button>
+              <button className="foot-link" onClick={handleContactPage}>
+                Contact
+              </button>
+              <button className="foot-link" onClick={handlePolicyPage}>
+                Privacy Policy
+              </button>
+            </div>
+            <div className="language-selector">
+              <div className="selected-language ">
+                <p className="flex">
+                  English <FontAwesomeIcon icon={faChevronUp} />
+                </p>
+              </div>
+            </div>
+          </footer>
         </div>
       )}
       {route == true && (
