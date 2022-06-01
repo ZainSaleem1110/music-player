@@ -16,7 +16,7 @@ function Landing() {
   const [route, setRoute] = useState(false)
   const handleRoutes = () => {
     setRoute(true)
-    navigate('/discover')
+    navigate('/')
   }
 
   const [loginPage, setLoginPage] = useState(false)
