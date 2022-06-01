@@ -5,7 +5,7 @@ import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 function LandFooter() {
   return (
     <footer className="footer flex">
-      <h2>Copyright © 2022 Lorem.</h2>
+      <h2>Copyright © 2022 New Yauk.</h2>
       <div className="center-footer flex">
         <button className="foot-link">
           Blogs
